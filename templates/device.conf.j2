@@ -19,6 +19,9 @@ Device {
 {% endif %}
   LabelMedia = {{ item.label_media | ternary('yes', 'No') }}
   Random Access = {{ item.random_access | ternary('yes', 'No') }}
+{% if item.autochanger is defined %}
+  Auto Changer = {{ item.autochanger | ternary('Yes', 'No') }}
+{% endif %}
   AutomaticMount = {{ item.automatic_mount | ternary('yes', 'No') }}
   RemovableMedia = {{ item.removable_media | ternary('yes', 'No') }}
   AlwaysOpen = {{ item.always_open | ternary('yes', 'No') }}
